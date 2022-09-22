@@ -204,7 +204,7 @@ function createEmployee() {
                                 name: `${first_name} ${last_name}`,
                                 value: id
                             }));
-                            managerChoices.unshift({name: "None", value:Null});
+                            managerChoices.unshift({name: "None", value: null});
 
                             prompt({
                                 type: "list",

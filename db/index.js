@@ -17,9 +17,10 @@ class employeeDB {
     }
 
     // update employee role 
-    updateEmployeeRole(employeeId,roleId) {
-        return this.connection.promise().query("UPDATE employee SET role_id = ? WHERE id =?",
-        [roleId, employeeId]
+     updateEmployeeRole(employeeId, roleId) {
+        return this.connection.promise().query(
+            "UPDATE employee SET role_id = ? WHERE id = ?",
+            [roleId, employeeId]
         );
     }
 
@@ -46,8 +47,8 @@ class employeeDB {
     }
 
     // add department
-    addDepartment() {
-        return this.connection.promise().query("INSER INTO department SET ?", department);
+    addDepartment(department) {
+        return this.connection.promise().query("INSERT INTO department SET ?", department);
     }
 }
 
